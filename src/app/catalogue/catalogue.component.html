@@ -1,0 +1,34 @@
+
+
+<h1 class="nbArticle">{{produits.length + " Articles"}}</h1>
+
+<div *ngFor="let ele of produits  ">
+
+  <app-produit [p]="ele"   (produitPanier)="AjouterP($event)"   ></app-produit>
+
+
+
+</div>
+
+
+
+<div *ngIf="panier.length>0;else vide"  class="panier" >
+
+  <h1 align="center" >Panier ({{panier.length }} Produit(s)) </h1>
+
+
+    <div *ngFor=" let p of panier ; let pos = index" >
+
+      <div><button (click)="delete(pos)" style="background-color: red ;border: 0 ;color: white ;font-weight: bold">Supprimer</button> <img [src]="p.image" width="120" >   {{p.ref }}  <span style="color: red;">{{p.prix}} DT </span>  </div>
+<hr>
+
+    </div>
+
+
+  <h1 style="color: blue"> Total. {{getTotal()}} DT </h1>
+</div>
+<ng-template #vide>
+
+  <h1 style="font-weight: bold ; color: red ;text-align: center" class="panier">Panier vide </h1>
+
+</ng-template>

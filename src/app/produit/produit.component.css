@@ -1,0 +1,22 @@
+table{
+  border: 1px  orangered  solid;
+  width: 100%;
+
+  margin-bottom: 5px;
+  text-align: left;
+}
+img{
+
+  height: 150px;
+
+}
+button{
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  height: 50px;
+
+}
+
+
