@@ -6,13 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  msg = 'Bienvenue sur notre site';
-
-  public  getDate():string {
-
-    let date = new Date() ;
-    return  date.toLocaleDateString() ;
-
-  }
+ 
 
 }
